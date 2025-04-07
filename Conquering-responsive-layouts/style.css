@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.parent {
+    background: #23424A;
+    padding: 5em; 
+    /* 16px(default font size) x 5em = 80px */
+    margin: 0 auto;
+    width: 80%;
+}
+
+.child {
+    background: #38CFD9;
+    width: 50%;
+    height: 250px;
+}
