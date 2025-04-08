@@ -1,3 +1,64 @@
+
+/* Custom properties -------------------------------------------- */
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Reset -------------------------------------------- */
+:root {
+    /* colors */
+    --clr-green: rgb(68, 255, 161);
+    --clr-dark-purple: rgb(36, 5, 62);
+    --clr-purple: rgb(88, 77, 98);
+    --clr-light-purple: rgb(253, 250, 255);
+    --clr-white: rgb(255, 255, 255);
+
+    /* font-sizes */
+    --fs-80: 5rem;
+    --fs-56: 3.5rem;
+    --fs-32: 2rem;
+    --fs-18: 1.125rem;
+
+    /* font-families */
+    /* .fraunces-<uniquifier> {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "SOFT" 0,
+    "WONK" 0;
+}
+    .manrope-<uniquifier> {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+    --ff-fraunces: "Fraunces", serif; font-weight: 600;
+    --ff-manrope-normal: "Manrope", sans-serif; font-weight: 400;
+    --ff-manrope-bold: "Manrope", sans-serif; font-weight: 700;
+}
+
+
 /*---------------------------------- General styles */
 * {
     box-sizing: border-box;
