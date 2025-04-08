@@ -1,0 +1,37 @@
+/*---------------------------------- General styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    /* width: 100%; */
+    max-width: 1440px;
+    margin-inline: auto;
+}
+
+.wrapper {
+    max-width: 1120px;
+    width: 100%;
+    margin-inline: auto;
+}
+
+.flex {
+    display: flex;
+}
+
+/*---------------------------------- Nav styles */
+nav {
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 91px;
+}
+
+.bg-color {
+    background-color: #24053E;
+}
+
+
