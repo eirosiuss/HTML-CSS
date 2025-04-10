@@ -257,7 +257,7 @@ select {
 
 .large-button {
     position: relative;
-    display: grid;
+    display: inline-grid;
     z-index: 1;
     place-items: center;
     padding: 0 2rem;
@@ -304,7 +304,7 @@ select {
 
 .underline-indicators>* {
     border-bottom: .2rem solid hsl(var(--clr-white) / 0);
-    border: 0;
+    /* border: 0; */
     cursor: pointer;
     padding: var(--underline-gap, 1rem) 0;
 }
@@ -323,6 +323,10 @@ select {
 
 .tab-list {
     --gap: 2rem;
+}
+
+button {
+    border: 0;
 }
 
 .dot-indicators {
@@ -347,26 +351,7 @@ select {
     background-color: hsl(var(--clr-white) / 1);
 }
 
-/* .small-button {
-    cursor: pointer;
-    position: relative;
-    display: grid;
-    z-index: 1;
-    place-items: center;
-    width: 5rem;
-    text-decoration: none;
-    border-radius: 50%;
-    border: 1px solid hsl( var(--clr-white)/ .25);
-    aspect-ratio: 1 / 1;
-}
-
-.small-button:hover,
-.small-button:focus {
-    border: 1px solid hsl( var(--clr-white));
-} */
-
 .number-indicators {
-    flex-direction: column;
     align-items: center;
 }
 
@@ -393,10 +378,3 @@ select {
     color: hsl(var(--clr-dark));
     background-color: hsl(var(--clr-white) / 1);
 }
-
-
-
-/* .box {
-    background: lightblue;
-    padding: 3rem;
-} */
