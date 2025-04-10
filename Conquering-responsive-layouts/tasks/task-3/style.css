@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+body, h1 {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    background-color: rgba(35, 66, 74, 1);
+}
+
+.container {
+    margin-inline: 0;
+    width: 50%;
+    padding: 148px 122px;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 3rem;
+    line-height: 100%;
+    color: rgba(255, 255, 255);
+}
+
+p {
+    font-weight: 400;
+    font-size: 1.313rem;
+    line-height: 150%;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+a {
+    text-decoration: none;
+    color: rgba(7, 42, 45, 1);
+    text-transform: uppercase;
+    padding: 16px 48px;
+    background-color: rgba(56, 207, 217, 1);
+    border-radius: 50px;
+}
