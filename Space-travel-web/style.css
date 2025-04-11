@@ -130,6 +130,10 @@ select {
     gap: var(--gap, 1rem)
 }
 
+.flex.even-columns > * {
+    width: 100%;
+}
+
 .grid {
     display: grid;
     gap: var(--gap, 1rem)
