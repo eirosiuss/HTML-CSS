@@ -135,6 +135,10 @@ select {
     gap: var(--gap, 1rem)
 }
 
+.d-block {
+    display: block;
+}
+
 .flow>*:where(:not(:first-child)) {
     margin-top: var(--flow-space, 1rem);
 }
@@ -422,3 +426,4 @@ button {
     color: hsl(var(--clr-dark));
     background-color: hsl(var(--clr-white) / 1);
 }
+
