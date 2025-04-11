@@ -130,9 +130,9 @@ select {
     gap: var(--gap, 1rem)
 }
 
-.flex.even-columns > * {
+/* .flex.even-columns>* {
     width: 100%;
-}
+} */
 
 .grid {
     display: grid;
@@ -154,13 +154,21 @@ select {
 }
 
 .grid-container {
+    text-align: center;
     display: grid;
+    place-items: center;
+    padding-inline: 1rem;
+}
+
+.grid-container *{
+    max-width: 50ch;
 }
 
 @media (min-width: 45em) {
     .grid-container {
+        text-align: left;
         column-gap: var(--container-gap, 2rem);
-        grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(2rem, 1fr);
+        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
         /* tas pats kas virsuje */
         /* grid-template-columns: 2em repeat(2, minmax(0, 40rem)) 2em; */
     }
@@ -171,6 +179,11 @@ select {
 
     .grid-container>*:last-child {
         grid-column: 3;
+    }
+
+    .grid-container--home {
+        padding-bottom: max(6rem, 20vh);
+        align-items: end;
     }
 }
 
@@ -303,11 +316,8 @@ select {
 /* Components          */
 /* -------------------------- */
 
-#interactive-elements .flow {
-    margin-left: 100px;
-}
-
 .large-button {
+    font-size: 2rem;
     position: relative;
     display: inline-grid;
     z-index: 1;
@@ -430,4 +440,3 @@ button {
     color: hsl(var(--clr-dark));
     background-color: hsl(var(--clr-white) / 1);
 }
-
