@@ -351,6 +351,8 @@ select {
     list-style: none;
     padding: 0;
     margin: 0;
+    background: hsl(var(--clr-white) / 0.05);
+    backdrop-filter: blur(1.5rem);
 }
 
 @media (max-width: 35rem) {
@@ -359,7 +361,6 @@ select {
         position: fixed;
         z-index: 1000;
         inset: 0 0 0 30%;
-        background: black;
         list-style: none;
         padding: min(20rem, 15vh) 2rem;
         margin: 0;
