@@ -13,22 +13,6 @@
     --fs-32: 2rem;
     --fs-18: 1.125rem;
 
-    /* font-families */
-    /* .fraunces-<uniquifier> {
-  font-family: "Fraunces", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  font-variation-settings:
-    "SOFT" 0,
-    "WONK" 0;
-}
-    .manrope-<uniquifier> {
-  font-family: "Manrope", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-} */
     --ff-fraunces: "Fraunces", serif;
     font-weight: 600;
     --ff-manrope-normal: "Manrope", sans-serif;
@@ -70,12 +54,12 @@ dd {
 }
 
 /* set up the body */
-body {
+/* body {
     font-family: var(--ff-manrope-normal);
     font-size: var(--fs-18);
     color: var(--clr-dark-purple);
     background-color: var(--clr-white);
-}
+} */
 
 /* make images easiet to work with */
 img,
@@ -94,15 +78,22 @@ select {
 
 ul[role='list'],
 ol[role='list'] {
-  list-style: none;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* Utility classes -------------------------------------------- */
-
-
 .container {
-    max-width: 90rem;
-    margin-inline: auto;
+    max-width: 70rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
 }
 
 /* pasidometi----------------------------- ar reikalingas */
@@ -116,48 +107,88 @@ ol[role='list'] {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
-} */ 
+} */
 
 /* colors */
-.bg-dark {background-color: var(--clr-dark-purple);}
-.bg-light {background-color: var(--clr-light-purple)}
-.bg-white {background-color: var(--clr-white)}
-.bg-green {background-color: var(--clr-green)}
+.bg-dark {
+    background-color: var(--clr-dark-purple);
+}
 
-/* --ff-fraunces: "Fraunces", serif;
-font-weight: 600;
---ff-manrope-normal: "Manrope", sans-serif;
-font-weight: 400;
---ff-manrope-bold: "Manrope", sans-serif;
-font-weight: 700; */
+.bg-light {
+    background-color: var(--clr-light-purple)
+}
+
+.bg-white {
+    background-color: var(--clr-white)
+}
+
+.bg-green {
+    background-color: var(--clr-green)
+}
+
+.text-dark {
+    color: var(--clr-dark-purple);
+}
+
+.text-light {
+    color: var(--clr-light-purple);
+}
+
+.text-white {
+    color: var(--clr-white);
+}
+
+.text-green {
+    color: var(--clr-green);
+}
 
 /* typography */
-.ff-fraunces {font-family: var(--ff-fraunces);}
-.ff-manrope-normal {font-family: var(--ff-manrope-normal);}
-.ff-manrope-bold {font-family: var(--ff-manrope-bold);}
-
-.fs-80 {font-size: var(--fs-80);}
-.fs-56 {font-size: var(--fs-56);}
-.fs-32 {font-size: var(--fs-32);}
-.fs-18 {font-size: var(--fs-18);}
-
-.wrapper {
-    max-width: 1120px;
-    width: 100%;
-    margin-inline: auto;
+.ff-fraunces {
+    font-family: var(--ff-fraunces);
 }
 
-.flex {
-    display: flex;
+.ff-manrope-normal {
+    font-family: var(--ff-manrope-normal);
+    line-height: 1.8;
 }
 
+.ff-manrope-bold {
+    font-family: var(--ff-manrope-bold);
+    line-height: 1.5;
+}
+
+.fs-80 {
+    font-size: var(--fs-80);
+    line-height: 1;
+}
+
+.fs-56 {
+    font-size: var(--fs-56);
+    line-height: 1.2;
+}
+
+.fs-32 {
+    font-size: var(--fs-32);
+    line-height: 1.2;
+}
+
+.fs-18 {
+    font-size: var(--fs-18);
+}
+
+/* Components -------------------------------------------- */
+.underline-indicators {
+    border-bottom: 3px solid rgb(68, 255, 161);
+    cursor: pointer;
+}
+
+.underline-indicators:hover,
+.underline-indicators:focus {
+    color: var(--clr-green);
+}
 /*---------------------------------- Nav styles */
 nav {
     justify-content: space-between;
     align-items: flex-end;
-    height: 91px;
-}
-
-.bg-color {
-    background-color: #24053E;
+    height: 5.688rem;
 }
