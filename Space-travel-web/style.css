@@ -122,7 +122,7 @@ select {
 }
 
 /* -------------------------- */
-/* Utility classes                      */
+/* Utility classes            */
 /* -------------------------- */
 
 .flex {
@@ -160,7 +160,7 @@ select {
     padding-inline: 1rem;
 }
 
-.grid-container *{
+.grid-container * {
     max-width: 50ch;
 }
 
@@ -439,4 +439,31 @@ button {
 .number-indicators>[aria-selected="true"] {
     color: hsl(var(--clr-dark));
     background-color: hsl(var(--clr-white) / 1);
+}
+
+/* -------------------------- */
+/* Page specific backgrounds  */
+/* -------------------------- */
+
+body {
+    background-size: cover;
+    background-position: bottom center;
+}
+
+/* home */
+.home {
+    background-image: url(./assets/home/background-home-mobile.jpg);
+}
+
+@media (min-width: 35rem) {
+    .home {
+        background-position: center center;
+        background-image: url(./assets/home/background-home-tablet.jpg);
+    }
+}
+
+@media (min-width: 45rem) {
+    .home {
+        background-image: url(./assets/home/background-home-desktop.jpg);
+    }
 }
