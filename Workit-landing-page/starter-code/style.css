@@ -92,6 +92,10 @@ a {
     margin: 0 auto;
 }
 
+.bg-curve {
+    clip-path: ellipse(100% 100% at 50% 0%);
+}
+
 .flex {
     display: flex;
 }
@@ -186,9 +190,13 @@ a {
 .underline-indicators:focus {
     color: var(--clr-green);
 }
-/*---------------------------------- Nav styles */
+
+/*---------------------------------- Navigation styles */
 nav {
     justify-content: space-between;
     align-items: flex-end;
     height: 5.688rem;
 }
+
+/*---------------------------------- Header styles */
+
