@@ -54,12 +54,12 @@ dd {
 }
 
 /* set up the body */
-/* body {
+body {
     font-family: var(--ff-manrope-normal);
-    font-size: var(--fs-18);
+    font-size: var(--fs-16);
     color: var(--clr-dark-purple);
     background-color: var(--clr-white);
-} */
+}
 
 /* make images easiet to work with */
 img,
@@ -93,7 +93,11 @@ a {
 }
 
 .bg-curve {
-    clip-path: ellipse(100% 100% at 50% 0%);
+    clip-path: ellipse(130% 100% at 50% 0%);
+}
+
+.bg-dark-height {
+    height: 48.188rem;
 }
 
 .flex {
@@ -183,11 +187,31 @@ a {
 /* Components -------------------------------------------- */
 .underline-indicators {
     border-bottom: 3px solid rgb(68, 255, 161);
-    cursor: pointer;
 }
 
-.underline-indicators:hover,
-.underline-indicators:focus {
+.btn-primary {
+    font-family: var(--ff-manrope-bold);
+    font-size: var(--fs-18);
+    color: var(--clr-dark-purple);
+    background-color: var(--clr-green);
+    padding: 12px 32px;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--clr-dark-purple);
+    border: 2px solid var(--clr-green);
+    color: var(--clr-green);
+}
+
+.btn-secondary {
+    font-family: var(--ff-manrope-bold);
+    font-size: var(--fs-18);
+    color: var(--clr-white);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
     color: var(--clr-green);
 }
 
@@ -199,4 +223,19 @@ nav {
 }
 
 /*---------------------------------- Header styles */
+header {
+    text-align: center;
+    padding-block-start: 3.5rem;
+}
 
+header h1 {
+    margin: 0 auto;
+    max-width: 11ch;
+    padding-block-end: 3.25rem;
+
+
+}
+
+header a {
+    margin-block-end: 5.5rem;
+}
