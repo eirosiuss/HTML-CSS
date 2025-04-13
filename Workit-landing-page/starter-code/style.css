@@ -97,7 +97,7 @@ a {
 }
 
 .bg-curve-bottom {
-    background: radial-gradient(ellipse 110% 100% at 50% 0%, var(--clr-light-purple) 100%, var(--clr-white) 100%);
+    background: radial-gradient(ellipse 105% 100% at 50% 0%, var(--clr-light-purple) 100%, var(--clr-white) 100%);
 }
 
 .flex {
@@ -157,6 +157,7 @@ a {
 
 .ff-manrope-normal {
     font-family: var(--ff-manrope-normal);
+    font-weight: 400;
     line-height: 1.8;
 }
 
@@ -238,6 +239,7 @@ header .img {
     margin: 0 auto;
     max-width: 767px;
     margin-block-start: 6.25rem;
+    padding-block-end: 5.5rem;
 }
 
 /*---------------------------------- Middle-section styles */
@@ -275,4 +277,35 @@ header .img {
 }
 
 /*---------------------------------- Founder-section styles */
+.founder-section {
+    margin-top: 7rem;
+}
 
+.founder-section .flex {
+    display: grid;
+    max-width: 70rem;
+    height: 36.188rem;
+    grid-template-columns: 29.813rem auto;
+    position: relative;
+    
+}
+
+.founder {
+    max-width: 477px;
+    position: relative;
+}
+
+.article {
+    max-width: 45.625rem;
+    padding-top: 4rem;
+    padding-bottom: 4.75rem;
+    padding-left: 4rem;
+    align-self: end;
+    margin-left: -5.438rem;
+    z-index: 2;
+
+}
+
+.article p {
+    margin: 2rem 4rem 2.75rem 0;  
+}
