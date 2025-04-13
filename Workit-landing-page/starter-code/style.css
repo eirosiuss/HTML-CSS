@@ -92,12 +92,9 @@ a {
     margin: 0 auto;
 }
 
-.bg-curve {
-    clip-path: ellipse(130% 100% at 50% 0%);
-}
-
-.bg-dark-height {
-    height: 48.188rem;
+.bg-curve-top {
+    /* clip-path: ellipse(130% 100% at 50% 0%); */
+    background: radial-gradient(ellipse 130% calc(100% - 10.063rem) at 50% 0%, var(--clr-dark-purple) 100%, var(--clr-light-purple) 100%);
 }
 
 .flex {
@@ -232,10 +229,10 @@ header h1 {
     margin: 0 auto;
     max-width: 11ch;
     padding-block-end: 3.25rem;
-
-
 }
 
-header a {
-    margin-block-end: 5.5rem;
+header .img {
+    margin: 0 auto;
+    max-width: 767px;
+    margin-block-start: 6.25rem;
 }
