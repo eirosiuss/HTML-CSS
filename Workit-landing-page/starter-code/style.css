@@ -48,7 +48,8 @@ p,
 figure,
 blockquote,
 dl,
-dd {
+dd,
+ul {
     margin: 0;
     padding: 0;
 }
@@ -76,8 +77,8 @@ select {
     font: inherit
 }
 
-ul[role='list'],
-ol[role='list'] {
+ul,
+ol {
     list-style: none;
 }
 
@@ -233,6 +234,7 @@ header h1 {
     margin: 0 auto;
     max-width: 11ch;
     padding-block-end: 3.25rem;
+    font-weight: 600;
 }
 
 header .img {
@@ -262,18 +264,21 @@ header .img {
     justify-content: center;
     margin-block-end: 3.5rem;
     line-height: 1.2;
+    font-weight: 600;
 }
 
 .middle-section div>h3 {
     font-family: var(--ff-fraunces);
     font-size: var(--fs-32);
     margin-block-end: 1.75rem;
+    font-weight: 600;
 }
 
 .middle-section div>p:last-child {
     font-family: var(--ff-manrope-normal);
     font-size: var(--fs-18);
     line-height: 1.8;
+    font-weight: 400;
 }
 
 /*---------------------------------- Founder-section styles */
@@ -306,6 +311,35 @@ header .img {
 
 }
 
+.article h2 {
+    font-weight: 600;
+}
+
 .article p {
     margin: 2rem 4rem 2.75rem 0;  
+}
+
+/*---------------------------------- Footer styles */
+footer {
+    margin: 0 auto;
+    padding: 7rem 0;
+    max-width: 7.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+footer img {
+    width: 5.985rem;
+    margin: 0 auto;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3.5rem;
+}
+
+footer li {
+    width: 20px;
 }
