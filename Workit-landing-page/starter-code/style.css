@@ -239,7 +239,7 @@ header h1 {
 
 header .img {
     margin: 0 auto;
-    max-width: 767px;
+    max-width: 491px;
     margin-block-start: 6.25rem;
     padding-block-end: 5.5rem;
 }
@@ -336,10 +336,15 @@ footer img {
 footer ul {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:baseline;
     padding-top: 3.5rem;
 }
 
-footer li {
-    width: 20px;
+footer svg path {
+    fill: var(--clr-purple);
+}
+
+footer svg path:hover,
+footer svg path:focus {
+    fill: var(--clr-dark-purple)
 }
