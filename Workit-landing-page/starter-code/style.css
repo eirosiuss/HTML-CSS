@@ -93,8 +93,11 @@ a {
 }
 
 .bg-curve-top {
-    /* clip-path: ellipse(130% 100% at 50% 0%); */
     background: radial-gradient(ellipse 130% calc(100% - 10.063rem) at 50% 0%, var(--clr-dark-purple) 100%, var(--clr-light-purple) 100%);
+}
+
+.bg-curve-bottom {
+    background: radial-gradient(ellipse 110% 100% at 50% 0%, var(--clr-light-purple) 100%, var(--clr-white) 100%);
 }
 
 .flex {
@@ -236,3 +239,40 @@ header .img {
     max-width: 767px;
     margin-block-start: 6.25rem;
 }
+
+/*---------------------------------- Middle-section styles */
+.middle-section {
+    text-align: center;
+    gap: 2rem;
+    padding-block-end: 13.5rem;
+}
+
+.middle-section div>p:first-child {
+    font-family: var(--ff-fraunces);
+    font-size: 1.5rem;
+    border: var(--clr-purple) 1px solid;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block-end: 3.5rem;
+    line-height: 1.2;
+}
+
+.middle-section div>h3 {
+    font-family: var(--ff-fraunces);
+    font-size: var(--fs-32);
+    margin-block-end: 1.75rem;
+}
+
+.middle-section div>p:last-child {
+    font-family: var(--ff-manrope-normal);
+    font-size: var(--fs-18);
+    line-height: 1.8;
+}
+
+/*---------------------------------- Founder-section styles */
+
