@@ -91,10 +91,13 @@ a {
     max-width: 70rem;
     width: 100%;
     margin: 0 auto;
+    padding: 0 2.75rem;
 }
 
 .bg-curve-top {
     background: radial-gradient(ellipse 130% calc(100% - 10.063rem) at 50% 0%, var(--clr-dark-purple) 100%, var(--clr-light-purple) 100%);
+    position: relative;
+    overflow: clip
 }
 
 .bg-curve-bottom {
@@ -224,6 +227,18 @@ nav {
     height: 5.688rem;
 }
 
+.top-pattern {
+    position: absolute;
+    top: 138px;
+    left: -101px;
+}
+
+.middle-pattern {
+    position: absolute;
+    top: 342px;
+    right: -45.68px;
+}
+
 /*---------------------------------- Header styles */
 header {
     text-align: center;
@@ -292,12 +307,11 @@ header .img {
     height: 36.188rem;
     grid-template-columns: 29.813rem auto;
     position: relative;
-    
+
 }
 
 .founder {
     max-width: 477px;
-    position: relative;
 }
 
 .article {
@@ -305,10 +319,16 @@ header .img {
     padding-top: 4rem;
     padding-bottom: 4.75rem;
     padding-left: 4rem;
+    padding-right: 4rem;
     align-self: end;
     margin-left: -5.438rem;
-    z-index: 2;
+    position: relative;
+}
 
+.bottom-pattern {
+    position: absolute;
+    bottom: -64.45px;
+    right: 107.71px;
 }
 
 .article h2 {
@@ -316,7 +336,7 @@ header .img {
 }
 
 .article p {
-    margin: 2rem 4rem 2.75rem 0;  
+    margin: 2rem 0rem 2.75rem 0;
 }
 
 /*---------------------------------- Footer styles */
@@ -336,7 +356,7 @@ footer img {
 footer ul {
     display: flex;
     justify-content: space-between;
-    align-items:baseline;
+    align-items: baseline;
     padding-top: 3.5rem;
 }
 
