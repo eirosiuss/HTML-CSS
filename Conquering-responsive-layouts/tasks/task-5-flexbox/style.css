@@ -1,3 +1,17 @@
+/* 
+////// For this challenge ///////
+
+- All text is in the text.md file
+
+// Requirements
+1. Refer to the design specs for the
+   overall layout 
+2. The image should line up with
+   the sidebar in the section
+   below
+
+*/
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -14,7 +28,7 @@ img {
 
 h1 {
     font-size: 3rem;
-    margin: 0;
+    margin-top: 0;
 }
 
 .container {
@@ -24,22 +38,31 @@ h1 {
 }
 
 .row {
+    /* display: flex => flex container */
     display: flex;
-    /* gap: 100px; */
     justify-content: space-between;
+    
+    /* can't use yet */
+    /* gap: 100px; */
 }
 
 .col {
+    /* these are now flex items */
     width: 100%;
+}
+
+.col + .col {
+    margin-left: 30px;
 }
 
 .hero {
     padding: 100px 0;
     background-color: #23424A;
     color: #FFF;
+    margin-bottom: 50px;
 }
 
-.hero__text {
+.hero__text { 
     width: 62%;
 }
 
@@ -66,4 +89,22 @@ h1 {
 .btn:hover,
 .btn:focus {
     opacity: .75; 
+}
+
+.services {
+    flex: 2;
+    margin-top: 30px;
+}
+
+.services h2 {
+    color: #136C72;
+}
+
+.features {
+    flex-direction: column;
+    flex: 1;
+    background-color: #136C72;
+    text-align: center;
+    color: white;
+    padding: 30px;
 }
