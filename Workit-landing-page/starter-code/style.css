@@ -123,10 +123,12 @@ a {
 
 
 .bg-curve-top {
-    background: radial-gradient(ellipse 130% calc(100% - 10.063rem) at 50% 0%, var(--clr-dark-purple) 100%, var(--clr-light-purple) 100%);
+    background: radial-gradient(ellipse 130% 75% at 50% 0%, var(--clr-dark-purple) 100%, var(--clr-light-purple) 100%);
     position: relative;
-    overflow: clip
+    overflow: clip;
 }
+
+
 
 .bg-curve-bottom {
     background: radial-gradient(ellipse 120% 100% at 50% 0%, var(--clr-light-purple) 100%, var(--clr-white) 100%);
@@ -475,6 +477,35 @@ header .img {
         position: absolute;
         bottom: -113.45px;
         left: 270px;
+    }
+}
+
+@media (width < 36em) {
+    .founder-section .flex {
+        margin: 0 auto;
+        max-width: 20.938rem;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .founder {
+        width: 100%;
+        margin-bottom: -48px;
+    }
+
+    .article {
+        max-width: 100%;
+        padding-top: 2rem;
+        padding-bottom: 2.75rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+
+    }
+
+    .bottom-pattern {
+        display: none;
     }
 }
 
