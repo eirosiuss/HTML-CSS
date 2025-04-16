@@ -90,6 +90,13 @@ body {
     margin: 0 auto;
     background-color: var(--clr-white);
     border-radius: 20px;
+    margin-top: 230.5px;
+}
+
+@media (width < 36em) {
+    .flex {
+    margin-top: 156.5px;
+    }
 }
 
 .description {
