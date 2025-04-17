@@ -91,6 +91,8 @@ body {
 
     display: grid;
     grid-template-rows: min-content 1fr;
+
+    overflow-x: hidden;
 }
 
 /* make images easiet to work with */
@@ -352,7 +354,7 @@ select {
     padding: 0;
     margin: 0;
     background: hsl(var(--clr-dark) / 0.95);
-    /* backdrop-filter: blur(1.5rem); */
+    backdrop-filter: blur(1.5rem);
 }
 
 @supports (backdrop-filter: blur(1.5rem)) {
@@ -360,6 +362,10 @@ select {
     background: hsl(var(--clr-white) / 0.05);
     backdrop-filter: blur(1.5rem);
     }
+}
+
+.mobile-nav-toggle {
+    display: none;
 }
 
 @media (max-width: 35rem) {
@@ -372,11 +378,24 @@ select {
         padding: min(20rem, 15vh) 2rem;
         margin: 0;
         flex-direction: column;
+        transform: translateX(100%);
     }
 
-    .primary-navigation.underline-indicators>* {
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 2000;
+        right: 1rem;
+        top: 2rem;
+        background: transparent;
+        background-image: url(assets/shared/icon-hamburger.svg);
+        background-repeat: no-repeat;
+        width: 1.5rem;
+        aspect-ratio: 1;
         border: 0;
+
     }
+
 }
 
 .primary-navigation a {
@@ -389,23 +408,29 @@ select {
     color: hsl(var(--clr-white));
 }
 
-.underline-indicators>* {
-    border-bottom: .2rem solid hsl(var(--clr-white) / 0);
-    /* border: 0; */
+.underline-indicators > * {
     cursor: pointer;
     padding: var(--underline-gap, 1rem) 0;
+    border: 0;
+    border-bottom: .2rem solid hsl( var(--clr-white) / 0 );
 }
 
-.underline-indicators>*:hover,
-.underline-indicators>*:focus {
-    border-color: hsl(var(--clr-white)/ .5);
+.underline-indicators > *:focus {
+    border-color: hsl( var(--clr-white) / .5);
 }
 
+@media (hover: hover) {
+    .underline-indicators > *:hover{
+        border-color: hsl( var(--clr-white) / .5);
+    }
+}
 
-.underline-indicators>.active,
-.underline-indicators>[aria-selected="true"] {
-    color: hsl(var(--clr-white) / 1);
-    border-color: hsl(var(--clr-white) / 1);
+@media (min-width: 35rem) {
+    .underline-indicators > .active,
+    .underline-indicators > [aria-selected="true"] {
+        color: hsl( var(--clr-white) / 1);
+        border-color: hsl( var(--clr-white) / 1); 
+    }
 }
 
 .tab-list {
