@@ -12,7 +12,9 @@
 
 */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -38,21 +40,9 @@ h1 {
 }
 
 .row {
-    /* display: flex => flex container */
     display: flex;
     justify-content: space-between;
-    
-    /* can't use yet */
-    /* gap: 100px; */
-}
-
-.col {
-    /* these are now flex items */
-    width: 100%;
-}
-
-.col + .col {
-    margin-left: 30px;
+    gap: 20px;
 }
 
 .hero {
@@ -62,7 +52,7 @@ h1 {
     margin-bottom: 50px;
 }
 
-.hero__text { 
+.hero__text {
     width: 62%;
 }
 
@@ -78,7 +68,7 @@ h1 {
 .btn {
     display: inline-block;
     text-decoration: none;
-    text-transform: uppercase; 
+    text-transform: uppercase;
     color: #23424A;
     font-weight: 900;
     background-color: #38CFD9;
@@ -88,7 +78,7 @@ h1 {
 
 .btn:hover,
 .btn:focus {
-    opacity: .75; 
+    opacity: .75;
 }
 
 .services {
