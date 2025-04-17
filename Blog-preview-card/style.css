@@ -1,0 +1,189 @@
+/* Custom properties------------------------------------------------------------------------------------- */
+:root {
+    /* colors */
+    --clr-yellow: rgb(244, 208, 78);
+    --clr-black: rgb(17, 17, 17);
+    --clr-gray: rgb(107, 107, 107);
+    --clr-white: rgb(255, 255, 255);
+
+    /* .figtree-<uniquifier> {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+    /* font-families */
+    --ff-figtree: "Figtree", sans-serif;
+
+    /* font-sizes */
+    --fs-24: 1.5rem;
+    --fs-16: 1rem;
+    --fs-14: 0.875rem;
+
+    /* font-weights */
+    --fw-800: 800;
+    --fw-700: 700;
+    --fw-400: 400;
+}
+
+/* Reset------------------------------------------------------------------------------------- */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    font-family: var(--ff-figtree);
+    font-size: var(--fs-16);
+    color: var(--clr-black);
+    background: var(--clr-yellow);
+    line-height: 150%;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    text-decoration: none;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+.card {
+    max-width: clamp(327px, 50%, 384px);
+    margin: 0 auto;
+    background: var(--clr-white);
+    border-radius: 20px;
+    box-shadow: 8px 8px 0 0 black;
+    border: 1px solid black;
+    margin-top: 219px;
+    /* padding: 0 24px; */
+}
+
+.img {
+    margin: 0 auto;
+    padding: 24px;
+}
+
+img {
+    border-radius: 10px;
+}
+
+.content {
+    padding: 0 24px 24px 24px;
+}
+
+.content p:nth-child(1) {
+    font-size: clamp(0.75rem, 0.375rem + 1.042vw, var(--fs-14));
+    font-weight: var(--fw-800);
+    background: var(--clr-yellow);
+    padding: 4px 12px;
+    display: inline-block;
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+
+.content p:nth-child(2) {
+    font-size: clamp(0.75rem, 0.375rem + 1.042vw, var(--fs-14));
+    font-weight: var(--fw-400);
+    margin-bottom: 12px;
+}
+
+.content a {
+    font-size: clamp(1.25rem, 0.5rem + 2.083vw, var(--fs-24));
+    font-weight: var(--fw-800);
+    margin-bottom: 12px;
+}
+
+.content a:hover,
+.content a:focus-visible {
+    color: var(--clr-yellow);
+}
+
+.content p:nth-child(4) {
+    font-size: clamp(0.875rem, 0.5rem + 1.042vw, var(--fs-16));
+    font-weight: var(--fw-400);
+    margin-bottom: 12px;
+    color: var(--clr-gray);
+}
+
+.author {
+    padding: 0 0 24px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.author div {
+    width: 32px;
+    height: 32px;
+}
+
+.author p {
+    font-size: var(--fs-14);
+    font-weight: var(--fw-800);
+}
