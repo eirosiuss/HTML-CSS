@@ -58,6 +58,7 @@ body {
     color: white;
     background: var(--clr-black);
     line-height: 150%;
+    font-size: 1rem;
 }
 
 /* Balance text wrapping on headings */
@@ -120,3 +121,61 @@ textarea:not([rows]) {
     text-align: center;
 }
 
+h3 {
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 4px;;
+}
+
+.profile p:nth-of-type(1) {
+    font-size: 14px;
+    color: var(--clr-green);
+    font-weight: 700;
+    padding-bottom: 24px;
+}
+
+.profile p:nth-of-type(2) {
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 24px;
+}
+
+.links {
+    text-align: center;
+    padding: 0 40px 40px 40px;
+}
+
+.links li {
+    background-color: var(--clr-light-grey);
+    padding: 12px 0px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.links li:hover,
+.links li:focus-visible {
+    background-color: var(--clr-green);
+    color: var(--clr-light-grey);
+    cursor: pointer;
+}
+
+.links ul>*:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+@media (width < 36em) {
+    .card {
+        max-width: 327px;
+        margin-top: 116.5px;
+    }
+
+    .links {
+        padding: 0 24px 24px 24px;
+    }
+
+    .img {
+        padding-top: 24px;
+    }
+
+}
