@@ -117,6 +117,10 @@ textarea:not([rows]) {
     padding-bottom: 24px;
 }
 
+img {
+    border-radius: 50%;
+}
+
 .profile {
     text-align: center;
 }
