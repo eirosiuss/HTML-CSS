@@ -156,7 +156,6 @@ img {
 .content a {
     font-size: clamp(1.25rem, 0.5rem + 2.083vw, var(--fs-24));
     font-weight: var(--fw-800);
-    margin-bottom: 12px;
 }
 
 .content a:hover,
@@ -167,6 +166,7 @@ img {
 .content p:nth-child(4) {
     font-size: clamp(0.875rem, 0.5rem + 1.042vw, var(--fs-16));
     font-weight: var(--fw-400);
+    margin-top: 12px;
     margin-bottom: 12px;
     color: var(--clr-gray);
 }
