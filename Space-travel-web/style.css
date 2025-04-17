@@ -348,6 +348,18 @@ select {
     transform: scale(1.5);
 }
 
+/* primary-header */
+
+.logo {
+    margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+
+}
+
+.primary-header {
+    justify-content: space-between;
+    align-items: center;
+}
+
 .primary-navigation {
     --underline-gap: 2rem;
     list-style: none;
@@ -359,9 +371,19 @@ select {
 
 @supports (backdrop-filter: blur(1.5rem)) {
     .primary-navigation {
-    background: hsl(var(--clr-white) / 0.05);
-    backdrop-filter: blur(1.5rem);
+        background: hsl(var(--clr-white) / 0.05);
+        backdrop-filter: blur(1.5rem);
     }
+}
+
+.primary-navigation a {
+    text-decoration: none;
+}
+
+.primary-navigation a>span {
+    margin-right: .5em;
+    font-weight: 700;
+    color: hsl(var(--clr-white));
 }
 
 .mobile-nav-toggle {
@@ -412,38 +434,31 @@ select {
     }
 }
 
-.primary-navigation a {
-    text-decoration: none;
-}
 
-.primary-navigation a>span {
-    margin-right: .75em;
-    font-weight: 700;
-    color: hsl(var(--clr-white));
-}
 
-.underline-indicators > * {
+.underline-indicators>* {
     cursor: pointer;
     padding: var(--underline-gap, 1rem) 0;
     border: 0;
-    border-bottom: .2rem solid hsl( var(--clr-white) / 0 );
+    border-bottom: .2rem solid hsl(var(--clr-white) / 0);
 }
 
-.underline-indicators > *:focus {
-    border-color: hsl( var(--clr-white) / .5);
+.underline-indicators>*:focus {
+    border-color: hsl(var(--clr-white) / .5);
 }
 
 @media (hover: hover) {
-    .underline-indicators > *:hover{
-        border-color: hsl( var(--clr-white) / .5);
+    .underline-indicators>*:hover {
+        border-color: hsl(var(--clr-white) / .5);
     }
 }
 
 @media (min-width: 35rem) {
-    .underline-indicators > .active,
-    .underline-indicators > [aria-selected="true"] {
-        color: hsl( var(--clr-white) / 1);
-        border-color: hsl( var(--clr-white) / 1); 
+
+    .underline-indicators>.active,
+    .underline-indicators>[aria-selected="true"] {
+        color: hsl(var(--clr-white) / 1);
+        border-color: hsl(var(--clr-white) / 1);
     }
 }
 
