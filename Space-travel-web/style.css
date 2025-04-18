@@ -448,17 +448,22 @@ select {
 }
 
 @media (min-width: 45em) {
-    .primary-header {
-        position: relative;
-    }
 
-    .primary-header::before {
+    .primary-header::after {
         content: '';
         display: block;
         position: relative;
         height: 1px;
         width: 100%;
-        background: red;
+        margin-right: -2.5rem;
+        background: hsl(var(--clr-white) / .25);
+        order: 1;
+        z-index: 1;
+
+    }
+
+    nav {
+        order: 2;
     }
 
     .primary-navigation {
