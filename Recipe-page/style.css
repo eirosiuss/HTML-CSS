@@ -129,7 +129,10 @@ textarea:not([rows]) {
 .container {
     max-width: 736px;
     margin: 0 auto;
+    margin-top: 128px;
     padding: 40px;
+    background-color: var(--clr-white);
+    border-radius: 24px;
 }
 
 .fm-present1 {
@@ -197,4 +200,144 @@ textarea:not([rows]) {
 
 .clr-Rose-50 {
     color: var(--clr-Rose-50)
+}
+
+img {
+    border-radius: 12px;
+}
+
+header {
+    padding-block: 40px 32px;
+}
+
+header h1 {
+    padding-bottom: 24px;
+}
+
+section:not(:last-of-type) {
+    margin-bottom: 32px;
+}
+
+.preparation {
+    padding: 24px;
+    background-color: var(--clr-Rose-50);
+    border-radius: 12px;
+}
+
+.preparation h2 {
+    padding-bottom: 16px;
+}
+
+.preparation li:not(:last-of-type) {
+    margin-bottom: 8px;
+}
+
+.preparation li {
+    position: relative;
+    padding-left: 40px;
+}
+
+.preparation li::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    width: 4px;
+    height: 4px;
+    background-color: var(--clr-Rose-800);
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.ingredients h3,
+.instructions h3,
+.nutrition h3 {
+    margin-bottom: 24px;
+}
+
+.ingredients li:not(:last-of-type) {
+    margin-bottom: 8px;
+}
+
+.ingredients li {
+    position: relative;
+    padding-left: 40px;
+    counter-increment: ingr;
+}
+
+.ingredients li::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    width: 4px;
+    height: 4px;
+    background-color: var(--clr-Brown-800);
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--clr-Stone-150);
+}
+
+.instructions {
+    margin-top: 32px;
+}
+
+.instructions ol {
+    counter-reset: plus-one;
+    padding-left: 0;
+}
+
+.instructions li {
+    position: relative;
+    padding-left: 40px;
+    counter-increment: plus-one
+}
+
+.instructions li::before {
+    content: counter(plus-one) ".";
+    position: absolute;
+    left: 8px;
+    top: 0;
+    color: var(--clr-Brown-800);
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: var(--fs-16);
+    line-height: 150%;
+}
+
+.instructions li:not(:last-of-type) {
+    margin-bottom: 8px;
+}
+
+.nutrition {
+    margin-top: 32px;
+}
+
+.margin {
+margin-bottom: 24px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex p {
+    flex: 50%;
+}
+
+.flex p:nth-child(2n+1) {
+    padding-left: 32px;
+}
+
+.flex p:nth-child(2n) {
+    padding-left: 16px;
+}
+
+.gap {
+    margin-block: 12px;
 }
