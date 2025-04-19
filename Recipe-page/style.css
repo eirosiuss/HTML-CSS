@@ -19,6 +19,16 @@
 }
 
 
+/* @media (width < 36em) {
+    :root {
+        --fs-80: 3rem;
+        --fs-56: 2rem;
+        --fs-32: 1.5rem;
+        --fs-24: 1.25rem;
+        --fs-18: 1rem;
+    }
+} */
+
 
 /* Reset------------------------------------------------------------------------------------- */
 /* Box sizing rules */
@@ -321,6 +331,7 @@ hr {
 .margin {
 margin-bottom: 24px;
 }
+
 
 .flex {
     display: flex;
