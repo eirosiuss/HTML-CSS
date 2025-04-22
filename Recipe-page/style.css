@@ -133,10 +133,18 @@ textarea:not([rows]) {
 .container {
     max-width: 736px;
     margin: 0 auto;
-    margin-top: 128px;
+    /* margin-top: 128px; */
     padding: 40px;
     background-color: var(--clr-white);
-    border-radius: 24px;
+    border-radius: 0 0 24px 24px;
+}
+
+@media (width < 36em) {
+    .container {
+        /* margin-top: 0; */
+        padding: 40px 32px;
+        border-radius: 0;
+    }
 }
 
 .fm-present1 {
@@ -206,12 +214,31 @@ textarea:not([rows]) {
     color: var(--clr-Rose-50)
 }
 
+.img {
+    max-width: 736px;
+    margin: 0 auto;
+    padding: 40px 40px 0;
+    background-color: var(--clr-white);
+    border-radius: 24px 24px 0 0;
+}
+
 img {
     border-radius: 12px;
 }
 
+@media (width < 36em) {
+    .img {
+        padding: 0;
+        border-radius: 0;
+    }
+
+    img {
+        border-radius: 0;
+    }
+}
+
 header {
-    padding-block: 40px 32px;
+    padding-block: 0 32px;
 }
 
 header h1 {
@@ -323,7 +350,7 @@ hr {
 }
 
 .margin {
-margin-bottom: 24px;
+    margin-bottom: 24px;
 }
 
 
