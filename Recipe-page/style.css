@@ -133,7 +133,7 @@ textarea:not([rows]) {
 .container {
     max-width: 736px;
     margin: 0 auto;
-    /* margin-top: 128px; */
+    margin-bottom: 128px;
     padding: 40px;
     background-color: var(--clr-white);
     border-radius: 0 0 24px 24px;
