@@ -219,23 +219,18 @@ textarea:not([rows]) {
 
 img {
     border-radius: 8px 0 0 8px;
+    height: 100%;
 }
 
 @media (width < 36em) {
-    .img {
-        height: 342px;
-        flex: 1;
-        overflow: hidden
-    }
-
     img {
-        border-radius: 8px 0 0 8px;
-        height: 100%;
-        object-position: center;
-        object-fit: contain;
+        border-radius: 8px 8px 0 0;
+        width: 350px;
+        height: 342px;
+        object-position: center 25%;
+        object-fit: cover;
     }
 }
-
 
 article {
     flex: 50%;
@@ -266,4 +261,11 @@ button {
     background-color: inherit;
     border: none;
     cursor: pointer;
+}
+
+button:hover,
+button:focus-visible,
+.button:hover,
+.button:focus-visible {
+    background-color: var(--clr-green-dark);
 }
