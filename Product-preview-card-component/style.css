@@ -9,7 +9,7 @@
     --clr-green-dark: rgb(26, 64, 50);
 
     /* font-sizes */
-    --fs-32: 1rem;
+    --fs-32: 2rem;
     --fs-14: 0.875rem;
     --fs-13: 0.813rem;
     --fs-12: 0.75rem;
@@ -67,7 +67,7 @@ body {
     font-family: "Montserrat", sans-serif;
     font-size: var(--fs-12);
     color: var(--clr-black);
-    background: var(--clr-white);
+    background: var(--clr-cream);
 }
 
 /* Balance text wrapping on headings */
@@ -191,4 +191,79 @@ textarea:not([rows]) {
 
 .clr-green-dark {
     color: var(--clr-green-dark);
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-block: 289px 284px;
+    border-radius: 8px;
+    background-color: var(--clr-white);
+}
+
+@media (width < 36em) {
+    .container {
+        max-width: 350px;
+        margin-block: 80px 172px;
+        flex-direction: column;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.img {
+    flex: 50%;
+}
+
+img {
+    border-radius: 8px 0 0 8px;
+}
+
+@media (width < 36em) {
+    .img {
+        height: 342px;
+        flex: 1;
+        overflow: hidden
+    }
+
+    img {
+        border-radius: 8px 0 0 8px;
+        height: 100%;
+        object-position: center;
+        object-fit: contain;
+    }
+}
+
+
+article {
+    flex: 50%;
+    padding: 32px;
+}
+
+.title h1 {
+    margin-block: 24px;
+}
+
+.price {
+    margin-block: 32px;
+    gap: 16px;
+    align-items: center;
+}
+
+.button {
+    background-color: var(--clr-green);
+    height: 50px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+button {
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
 }
