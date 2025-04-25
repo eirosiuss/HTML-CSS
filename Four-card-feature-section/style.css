@@ -27,7 +27,10 @@
 }
 
 @media (width < 36em) {
-    :root {}
+    :root {
+        --fs-36: 1.5rem;
+        --fs-20: 1.5rem;
+    }
 }
 
 @media (36em <=width <=48em) {
@@ -114,14 +117,19 @@ textarea:not([rows]) {
 
 /* ===================== */
 /* 🧱 Layouts */
-.stack {
-    display: flex;
-    flex-direction: column;
+.container {
+    margin: 0 auto;
+    max-width: 1114px;
+    padding: 0 54px;
 }
 
-.stack>*+* {
-    margin-block-start: var(--gap, 1rem);
+.flex {
+    display: flex;
 }
+
+/* .flex>*+* {
+    margin-block-start: var(--gap, 1rem);
+} */
 
 .center {
     margin-inline: auto;
@@ -207,24 +215,6 @@ textarea:not([rows]) {
 .text-center {
     text-align: center;
 }
-/* .poppins-extralight {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-}
-  
-.poppins-regular {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.poppins-semibold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-*/
 
 .text-present-1 {
     font-size: var(--fs-36);
@@ -292,4 +282,8 @@ textarea:not([rows]) {
 
 .button:hover {
     background-color: var(--clr-cream);
+}
+
+header {
+    --gap: 54px
 }
