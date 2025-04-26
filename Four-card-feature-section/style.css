@@ -29,7 +29,7 @@
 @media (width < 36em) {
     :root {
         --fs-36: 1.5rem;
-        --fs-20: 1.5rem;
+        --fs-20: 0.938rem;
     }
 }
 
@@ -126,6 +126,12 @@ textarea:not([rows]) {
 @media (36em <=width <=48em) {
     .container {
         padding: 0 54px;
+    }
+}
+
+@media (width < 36em) {
+    .container {
+        padding: 0 30px;
     }
 }
 
@@ -344,6 +350,21 @@ main {
         flex-direction: column;
         margin-bottom: 80px;
     }
+
+    header {
+        margin-top: 80px;
+    }
+}
+
+@media (width < 36em) {
+    main {
+        flex-direction: column;
+        margin-bottom: 46px;
+    }
+
+    header {
+        margin-top: 56px;
+    }
 }
 
 main h2 {
@@ -388,7 +409,6 @@ main>article:last-child {
 }
 
 .middle article:first-child {
-    /* width: 100%; */
     min-height: 250px;
     border-top: 4px solid var(--clr-red);
     box-shadow: 0px 15px 30px -11px rgba(var(--clr-cyan), 0.5);
@@ -396,7 +416,6 @@ main>article:last-child {
 }
 
 .middle article:last-child {
-    /* width: 100%; */
     min-height: 250px;
     border-top: 4px solid var(--clr-orange);
     box-shadow: 0px 15px 30px -11px rgba(var(--clr-cyan), 0.5);
@@ -405,29 +424,46 @@ main>article:last-child {
 
 @media (36em <=width <=48em) {
     .middle {
-        /* max-width: 660px; */
         flex-direction: row;
-        gap: 32px;
-        flex: 1;
     }
 
     main>article:first-child {
-        min-height: 250px;
-        border-top: 4px solid rgb(var(--clr-cyan));
-        box-shadow: 0px 15px 30px -11px rgba(var(--clr-cyan), 0.5);
-        border-radius: 8px;
+        max-width: 314px;
+    }
+
+    main>article:last-child {
+        max-width: 314px;
+    }
+
+    .middle article:first-child {
+        max-width: 314px;
         flex: 1;
     }
-    
-    main>article:last-child {
-        min-height: 250px;
-        border-top: 4px solid var(--clr-blue);
-        box-shadow: 0px 15px 30px -11px rgba(var(--clr-cyan), 0.5);
-        border-radius: 8px;
+
+    .middle article:last-child {
+        max-width: 314px;
         flex: 1;
     }
 }
 
 @media (width < 36em) {
+    .middle {
+        flex-direction: column;
+    }
 
+    main>article:first-child {
+        max-width: 314px;
+    }
+
+    main>article:last-child {
+        max-width: 314px;
+    }
+
+    .middle article:first-child {
+        max-width: 314px;
+    }
+
+    .middle article:last-child {
+        max-width: 314px;
+    }
 }
