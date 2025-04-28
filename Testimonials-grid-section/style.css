@@ -1,0 +1,314 @@
+/* ===================== */
+/* 🔢 Custom properties */
+:root {
+    --measure: 60ch;
+    /* fonts */
+    --font-base: 1rem;
+    /* --line-height: 1.5; */
+    /* --color-bg: #fdfdfd;
+    --color-text: #111;
+    --color-accent: #2b6cb0;
+    --color-accent-hover: #2c5282; */
+
+    /* colors */
+    --clr-grey-500: rgb(77, 79, 98);
+    --clr-grey-400: rgb(106, 113, 120);
+    --clr-white: rgb(255, 255, 255);
+    --clr-red: rgb(234, 84, 84);
+    --clr-cyan: 68, 211, 210;
+    --clr-blue: rgb(84, 158, 242);
+    --clr-orange: rgb(252, 174, 74);
+
+    /* font-sizes */
+    --fs-36: 2.25rem;
+    --fs-20: 1.25rem;
+    --fs-15: 0.938rem;
+    --fs-13: 0.813rem;
+}
+
+@media (width < 36em) {
+    :root {
+
+    }
+}
+
+@media (36em <=width <=48em) {
+    :root {
+        
+    }
+}
+
+/* ===================== */
+/* Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+body {
+    font-size: var(--font-base);
+    /* line-height: var(--line-height); */
+    font-family: "Poppins", sans-serif;
+    color: var(--clr-grey-500);
+    background-color: var(--clr-white);
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    text-decoration: none;
+    color: currentColor;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* ===================== */
+/* 🧱 Layouts */
+.container {
+    margin: 0 auto;
+    max-width: ;
+    padding: ;
+}
+
+@media (36em <=width <=48em) {
+    .container {
+        padding: 0 54px;
+    }
+}
+
+@media (width < 36em) {
+    .container {
+        padding: 0 30px;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+/* .flex>*+* {
+    margin-block-start: var(--gap, 1rem);
+} */
+
+.center {
+    margin-inline: auto;
+    text-align: center;
+    padding-inline: var(--gap, 1rem);
+}
+
+.cluster {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap, 1rem);
+    justify-content: center;
+    align-items: center;
+}
+
+.with-sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap, 1rem);
+}
+
+.with-sidebar> :first-child {
+    flex-basis: 20rem;
+    flex-grow: 1;
+}
+
+.with-sidebar> :last-child {
+    flex-basis: 0;
+    flex-grow: 999;
+    min-inline-size: 50%;
+}
+
+.switcher {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap, 1rem);
+}
+
+.switcher>* {
+    flex-grow: 1;
+    flex-basis: calc((var(--measure) - 100%) * 999);
+}
+
+.cover {
+    min-block-size: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap, 1rem);
+}
+
+.frame {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    width: 100%;
+}
+
+.reel {
+    display: flex;
+    overflow-x: auto;
+    gap: var(--gap, 1rem);
+}
+
+.imposter {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+}
+
+.icon {
+    inline-size: 2rem;
+    aspect-ratio: 1;
+    object-fit: contain;
+}
+
+/* ===================== */
+/* 🧰 Utility classes */
+.text-center {
+    text-align: center;
+}
+
+/*     --clr-grey-500: rgb(77, 79, 98);
+    --clr-grey-400: rgb(106, 113, 120);
+    --clr-white: rgb(255, 255, 255);
+    --clr-red: rgb(234, 84, 84);
+    --clr-cyan: 68, 211, 210;
+    --clr-blue: rgb(84, 158, 242);
+    --clr-orange: rgb(252, 174, 74); */
+
+.clr-grey-500 {
+    color: var(--clr-grey-500);
+}
+
+.clr-grey-400 {
+    color: var(--clr-grey-400);
+}
+
+.clr-white {
+    color: var(--clr-white);
+}
+
+.clr-red {
+    color: var(--clr-red);
+}
+
+.clr-cyan {
+    color: rgb(var(--clr-cyan));
+}
+
+.clr-blue {
+    color: var(--clr-blue);
+}
+
+.clr-orange {
+    color: var(--clr-orange);
+}
+
+.text-present-1 {
+    font-size: var(--fs-36);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: 0.25px;
+}
+
+.text-present-2 {
+    font-size: var(--fs-36);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: 0.25px;
+}
+
+.text-present-3 {
+    font-size: var(--fs-20);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.35;
+    letter-spacing: 0px;
+}
+
+.text-present-4 {
+    font-size: var(--fs-15);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: 0px;
+}
+
+.text-present-5 {
+    font-size: var(--fs-13);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6;
+    letter-spacing: 0px;
+}
+
+/* ===================== */
+/* 🧩 Custom komponentai */
