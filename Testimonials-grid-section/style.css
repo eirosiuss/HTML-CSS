@@ -5,25 +5,24 @@
     /* fonts */
     --font-base: 1rem;
     /* --line-height: 1.5; */
-    /* --color-bg: #fdfdfd;
-    --color-text: #111;
-    --color-accent: #2b6cb0;
-    --color-accent-hover: #2c5282; */
 
     /* colors */
-    --clr-grey-500: rgb(77, 79, 98);
-    --clr-grey-400: rgb(106, 113, 120);
-    --clr-white: rgb(255, 255, 255);
-    --clr-red: rgb(234, 84, 84);
-    --clr-cyan: 68, 211, 210;
-    --clr-blue: rgb(84, 158, 242);
-    --clr-orange: rgb(252, 174, 74);
+    --clr-black: 18, 18, 18;
+    --clr-dark-blue: 25, 32, 45;
+    --clr-white: 255, 255, 255;
+    --clr-grey-100: 231, 234, 238;
+    --clr-grey-200: 207, 207, 207;
+    --clr-grey-400: 103, 109, 126;
+    --clr-grey-500: 72, 85, 106;
+    --clr-purple-50: 237, 228, 255;
+    --clr-purple-300: 167, 117, 241;
+    --clr-purple-500: 115, 63, 200;
+    --clr-background: 246, 245, 246;
 
     /* font-sizes */
-    --fs-36: 2.25rem;
     --fs-20: 1.25rem;
-    --fs-15: 0.938rem;
     --fs-13: 0.813rem;
+    --fs-11: 0.688rem;
 }
 
 @media (width < 36em) {
@@ -55,9 +54,9 @@ html {
 body {
     font-size: var(--font-base);
     /* line-height: var(--line-height); */
-    font-family: "Poppins", sans-serif;
+    font-family: "Barlow Semi Condensed";
     color: var(--clr-grey-500);
-    background-color: var(--clr-white);
+    background-color: rgb(var(--clr-background))
 }
 
 body,
@@ -120,19 +119,19 @@ textarea:not([rows]) {
 /* 🧱 Layouts */
 .container {
     margin: 0 auto;
-    max-width: ;
-    padding: ;
+    max-width: 1236px;
+    padding: 0 61px;
 }
 
 @media (36em <=width <=48em) {
     .container {
-        padding: 0 54px;
+        padding: 0 60px;
     }
 }
 
 @media (width < 36em) {
     .container {
-        padding: 0 30px;
+        padding: 0 35px;
     }
 }
 
@@ -229,85 +228,44 @@ textarea:not([rows]) {
     text-align: center;
 }
 
-/*     --clr-grey-500: rgb(77, 79, 98);
-    --clr-grey-400: rgb(106, 113, 120);
-    --clr-white: rgb(255, 255, 255);
-    --clr-red: rgb(234, 84, 84);
-    --clr-cyan: 68, 211, 210;
-    --clr-blue: rgb(84, 158, 242);
-    --clr-orange: rgb(252, 174, 74); */
-
-.clr-grey-500 {
-    color: var(--clr-grey-500);
-}
-
-.clr-grey-400 {
-    color: var(--clr-grey-400);
-}
-
-.clr-white {
-    color: var(--clr-white);
-}
-
-.clr-red {
-    color: var(--clr-red);
-}
-
-.clr-cyan {
-    color: rgb(var(--clr-cyan));
-}
-
-.clr-blue {
-    color: var(--clr-blue);
-}
-
-.clr-orange {
-    color: var(--clr-orange);
-}
-
 .text-present-1 {
-    font-size: var(--fs-36);
-    font-family: "Poppins", sans-serif;
+    font-size: var(--fs-20);
+    font-family: "Barlow Semi Condensed";
     font-weight: 600;
     font-style: normal;
-    line-height: 1.4;
-    letter-spacing: 0.25px;
+    line-height: 1.2;
+    letter-spacing: 0;
+    color: rgb(var(--clr-white));
 }
 
 .text-present-2 {
-    font-size: var(--fs-36);
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
+    font-size: var(--fs-13);
+    font-family: "Barlow Semi Condensed";
+    font-weight: 500;
     font-style: normal;
-    line-height: 1.4;
-    letter-spacing: 0.25px;
+    line-height: 1.1;
+    letter-spacing: 0;
+    color: rgb(var(--clr-white));
 }
 
 .text-present-3 {
-    font-size: var(--fs-20);
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    line-height: 1.35;
-    letter-spacing: 0px;
-}
-
-.text-present-4 {
-    font-size: var(--fs-15);
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
+    font-size: var(--fs-13);
+    font-family: "Barlow Semi Condensed";
+    font-weight: 500;
     font-style: normal;
     line-height: 1.4;
     letter-spacing: 0px;
+    color: rgb(var(--clr-purple-50));
 }
 
-.text-present-5 {
-    font-size: var(--fs-13);
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
+.text-present-4 {
+    font-size: var(--fs-11);
+    font-family: "Barlow Semi Condensed";
+    font-weight: 500;
     font-style: normal;
-    line-height: 1.6;
+    line-height: 1.1;
     letter-spacing: 0px;
+    color: rgb(var(--clr-purple-50));
 }
 
 /* ===================== */
