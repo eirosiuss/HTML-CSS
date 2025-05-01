@@ -1,5 +1,5 @@
-/* ===================== */
-/* 🔢 :root */
+/* =============================================== */
+/* Custom properties */
 :root {
     --font-base: 1rem;
     /* --line-height: 1.5; */
@@ -29,7 +29,7 @@
     :root {}
 }
 
-/* ===================== */
+/* =============================================== */
 /* Reset */
 *,
 *::before,
@@ -107,6 +107,15 @@ textarea:not([rows]) {
     scroll-margin-block: 5ex;
 }
 
+/* =============================================== */
+/* Utility classes */
+
+.container {
+    margin: 229px auto;
+    max-width: 1236px;
+    padding: 0 60px;
+}
+
 @media (36em <=width <=48em) {
     .container {
         padding: 0 60px;
@@ -118,9 +127,6 @@ textarea:not([rows]) {
         padding: 0 35px;
     }
 }
-
-/* ===================== */
-/* 🧰 Utility classes */
 
 .text-present-1 {
     font-size: var(--fs-20);
@@ -174,14 +180,8 @@ textarea:not([rows]) {
     background-color: rgb(var(--clr-dark-blue));
 }
 
-/* ===================== */
-/* 🧩 Custom components */
-
-.container {
-    margin: 229px auto;
-    max-width: 1236px;
-    padding: 0 60px;
-}
+/* =============================================== */
+/* Custom components */
 
 article {
     border-radius: 8px;
@@ -190,6 +190,16 @@ article {
 
 article:nth-child(1) {
     color: rgb(var(--clr-white));
+    position: relative;
+    z-index: 1;
+
+}
+
+article:nth-child(1) .absolute {
+    position: absolute;
+    top: 0;
+    left: 376px;
+    z-index: -1;
 }
 
 article:nth-child(1) .author p:last-child,
@@ -236,9 +246,33 @@ article:nth-child(5) > :last-child {
     color: rgb(var(--clr-grey-400));
 }
 
+.heading {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+h2 {
+    margin-bottom: 16px;
+}
+
+article .img img {
+    border-radius: 50%;
+    width: 28px;
+}
+
+article:first-child .img img {
+    border: 2px solid rgb(var(--clr-purple-300));
+}
+
+
+article:nth-last-child(2) .img img {
+    border: 2px solid rgb(var(--clr-purple-500));
+}
+
 .grid {
     display: grid;
     place-content: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 32px;
 }
