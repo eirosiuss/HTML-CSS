@@ -76,7 +76,7 @@ h1,
 h2,
 h3,
 h4 {
-    text-wrap: balance;
+    /* text-wrap: balance; */
 }
 
 a:not([class]) {
@@ -118,12 +118,14 @@ textarea:not([rows]) {
 
 @media (36em <=width <=48em) {
     .container {
+        margin: 83px auto;
         padding: 0 60px;
     }
 }
 
 @media (width < 36em) {
     .container {
+        margin: 73px auto;
         padding: 0 35px;
     }
 }
@@ -184,17 +186,12 @@ textarea:not([rows]) {
 /* Custom components */
 .grid {
     display: grid;
-    place-content: center;
     grid-template-columns: repeat(4, 1fr);
     gap: 32px;
 }
 
 article:nth-child(1) {
     grid-column: 1 / span 2;
-}
-
-article:nth-child(3) {
-    grid-column: 1;
 }
 
 article:nth-child(4) {
@@ -204,6 +201,36 @@ article:nth-child(4) {
 article:nth-child(5) {
     grid-column: 4;
     grid-row: 1 / 3;
+}
+
+@media (36em <=width <=48em) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    article:nth-child(4) {
+        grid-column: 1 / span 2;
+    }
+
+    article:nth-child(5) {
+        grid-column: 1 / span 2;
+        grid-row: auto;
+    }
+}
+
+@media (width < 36em) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    article:nth-child(1),
+    article:nth-child(2),
+    article:nth-child(3),
+    article:nth-child(4),
+    article:nth-child(5) {
+        grid-column: auto;
+        grid-row: auto;
+    }
 }
 
 article {
@@ -218,15 +245,21 @@ article:nth-child(1) {
     z-index: 1;
 }
 
-article:nth-child(1) .absolute {
+.absolute {
     position: absolute;
     top: 0;
     right: 60px;
     z-index: -1;
 }
 
+@media (width < 36em) {
+    .absolute {
+display: none;
+    }
+}
+
 article:nth-child(1) .author p:last-child,
-article:nth-child(1) > :last-child {
+article:nth-child(1)> :last-child {
     color: rgb(var(--clr-purple-50));
 }
 
@@ -235,7 +268,7 @@ article:nth-child(2) {
 }
 
 article:nth-child(2) .author p:last-child,
-article:nth-child(2) > :last-child {
+article:nth-child(2)> :last-child {
     color: rgb(var(--clr-grey-100));
 }
 
@@ -244,7 +277,7 @@ article:nth-child(3) {
 }
 
 article:nth-child(3) .author p:last-child,
-article:nth-child(3) > :last-child {
+article:nth-child(3)> :last-child {
     color: rgb(var(--clr-grey-400));
 }
 
@@ -256,7 +289,7 @@ article:nth-child(4) h2 {
     color: rgb(var(--clr-grey-200));
 }
 
-article:nth-child(4) > :last-child {
+article:nth-child(4)> :last-child {
     color: rgb(var(--clr-grey-100));
 }
 
@@ -265,7 +298,7 @@ article:nth-child(5) {
 }
 
 article:nth-child(5) .author p:last-child,
-article:nth-child(5) > :last-child {
+article:nth-child(5)> :last-child {
     color: rgb(var(--clr-grey-400));
 }
 
