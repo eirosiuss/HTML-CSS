@@ -16,24 +16,6 @@
     --fs-13: 0.813rem;
 }
 
-/* @media (36em <=width <=48em) {
-    :root {
-        --fs-64: 3rem;
-        --fs-40: 2.25rem;
-        --fs-18: 1rem;
-        --fs-16: 0.875rem;
-    }
-}
-
-@media (width < 36em) {
-    :root {
-        --fs-64: 2.5rem;
-        --fs-40: 2rem;
-        --fs-18: 1.125rem;
-        --fs-16: 0.75rem;
-    }
-} */
-
 /* =============================================== */
 /* Reset */
 *,
@@ -119,20 +101,6 @@ textarea:not([rows]) {
 /* =============================================== */
 /* Utility classes */
 
-.container {
-    margin-inline: auto;
-    max-width: 1208px;
-    padding-inline: 44px;
-}
-
-@media (36em <=width <=48em) {}
-
-@media (width < 36em) {
-    .container {
-        padding-inline: 32px;
-    }
-}
-
 .text-present-1 {
     font-size: var(--fs-20);
     font-weight: 700;
@@ -188,3 +156,86 @@ textarea:not([rows]) {
 
 /* =============================================== */
 /* Custom components */
+
+main {
+    margin-inline: 80px;
+}
+
+article {
+    margin: 0 auto;
+    max-width: 730px;
+    margin-block: 260px;
+    border-radius: 10px;
+    background-color: rgb(var(--clr-white));
+    display: flex;
+    max-height: 285px;
+}
+
+.card-image img {
+    border-radius: 10px 0 0 10px;
+    height: 100%;
+    clip-path: inset(0 65px 0 0);
+}
+
+@media (36em <=width <=48em) {
+    article {
+        margin-block: 227px;
+    }
+}
+
+@media (width < 36em) {
+    article {
+        margin-block: 64px;
+        margin-inline: 24px;
+        flex-direction: column;
+    }
+
+    .card-image img {
+        border-radius: 10px 10px 0 0;
+    }
+
+    main {
+        margin-inline: 0;
+    }
+}
+
+.card-text {
+    padding: 30px 40px 30px 0;
+    margin-left: -25px;
+    max-width: 365px;
+}
+
+.card-text > p {
+    padding: 24px 0;
+}
+
+@media (36em <=width <=48em) {
+    .card-text {
+        padding: 41px 32px 0;
+    }
+}
+
+@media (width < 36em) {
+    .card-text {
+        padding: 32px 30px 0;
+    }
+
+    .card-text > p {
+        padding: 24px 0 48px;
+    }
+}
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-name {
+    display: flex;
+    gap: 16px;
+}
+
+.profile-name img {
+    width: 40px;
+    border-radius: 50%;
+}
