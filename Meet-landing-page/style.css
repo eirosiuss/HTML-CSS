@@ -58,7 +58,7 @@ body {
     /* line-height: var(--line-height); */
     font-family: var(--ff-Red-Hat-Display);
     /* color: var(--clr-grey-500); */
-    /* background-color: rgb(var(--clr-background)) */
+    background-color: rgb(var(--clr-white))
 }
 
 body,
