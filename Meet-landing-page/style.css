@@ -174,7 +174,7 @@ textarea:not([rows]) {
     font-size: var(--fs-18);
     font-weight: 500;
     font-style: normal;
-    line-height: 1.1;
+    line-height: 1.5;
     letter-spacing: 0;
 }
 
@@ -458,4 +458,44 @@ header div:nth-child(2) button:first-child {
 
 .overview h2 {
     margin-bottom: 32px;
+}
+
+.second {
+    background-color: rgb(var(--clr-white));
+    /* margin-bottom: -50px; */
+}
+
+/* footer */
+
+footer {
+    background:
+        linear-gradient(rgba(var(--clr-cyan-600), 0.9)),
+        url("starter-code/assets/desktop/image-footer.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+footer .container {
+    margin-top: -28px;
+    padding-block: 112px;
+    display: flex;
+    gap: 95px;
+}
+
+footer button {
+    white-space: nowrap;
+    align-self: flex-start;
+}
+
+@media (width <=48em) {
+    footer .container {
+        gap: 24px;
+        flex-direction: column;
+        text-align: center;
+        padding-block: 64px;
+    }
+
+    footer button {
+        margin: 0 auto;
+    }
 }
