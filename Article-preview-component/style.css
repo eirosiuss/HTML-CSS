@@ -148,6 +148,10 @@ textarea:not([rows]) {
 /* =============================================== */
 /* Components */
 
+.absolute {
+    position: relative;
+}
+
 button {
     background-color: rgb(var(--clr-white));
     cursor: pointer;
@@ -162,6 +166,83 @@ button:hover path,
 button:focus-visible path {
     fill: rgb(var(--clr-white))
 }
+
+.share-links {
+    background: rgb(var(--clr-grey-900));
+    padding: 18px 38px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    position: absolute;
+    bottom: 26px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.share-links::after {
+    content: "";
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 12px;
+    background: rgb(var(--clr-grey-900));
+    clip-path: polygon(50% 0%, 100% 0%, 50% 100%, 0% 0%);
+}
+
+.share-links p,
+.share-links-mobile p {
+    text-transform: uppercase;
+}
+
+.share-links .icons,
+.share-links-mobile .icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+@media (width < 36em) {
+    .share-links {
+        display: none;
+    }
+    /* .mobile-off {
+        display: none;
+    } */
+    
+    .share-links::after {
+        display: none;
+    }
+
+    .share-links-mobile {
+        background: rgb(var(--clr-grey-900));
+        padding: 22px 30px;
+        border-radius: 0 0 10px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0 -30px -18px;
+    }
+
+    /* button:hover,
+    button:focus-visible {
+        background-color: rgb(var(--clr-grey-900));
+    } */
+    
+    button:hover circle,
+    button:focus-visible circle {
+        fill: rgb(var(--clr-grey-500))
+    }
+    
+    button:hover path,
+    button:focus-visible path {
+        fill: rgb(var(--clr-white))
+    }
+}
+
 /* =============================================== */
 /* Custom components */
 
@@ -240,6 +321,17 @@ article {
 .profile {
     display: flex;
     justify-content: space-between;
+}
+
+@media (width < 36em) {
+    /* .profile {
+        justify-content: unset;
+        flex-direction: row-reverse;
+    } */
+
+    *, ::before, ::after {
+        box-sizing: content-box;
+      }
 }
 
 .profile-name {
