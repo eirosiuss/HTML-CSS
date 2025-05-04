@@ -148,12 +148,20 @@ textarea:not([rows]) {
 /* =============================================== */
 /* Components */
 
+button {
+    background-color: rgb(var(--clr-white));
+    cursor: pointer;
+}
 
+button:hover circle,
+button:focus-visible circle {
+    fill: rgb(var(--clr-grey-500))
+}
 
-
-
-
-
+button:hover path,
+button:focus-visible path {
+    fill: rgb(var(--clr-white))
+}
 /* =============================================== */
 /* Custom components */
 
@@ -168,7 +176,7 @@ article {
     border-radius: 10px;
     background-color: rgb(var(--clr-white));
     display: flex;
-    max-height: 285px;
+    min-height: 285px;
 }
 
 .card-image img {
@@ -192,6 +200,8 @@ article {
 
     .card-image img {
         border-radius: 10px 10px 0 0;
+        height: auto;
+        clip-path: inset(0);
     }
 
     main {
@@ -205,22 +215,24 @@ article {
     max-width: 365px;
 }
 
-.card-text > p {
+.card-text>p {
     padding: 24px 0;
 }
 
 @media (36em <=width <=48em) {
     .card-text {
-        padding: 41px 32px 0;
+        padding: 41px 36px 41px 0;
     }
 }
 
 @media (width < 36em) {
     .card-text {
-        padding: 32px 30px 0;
+        padding: 32px 30px 18px;
+        margin-left: 0;
+        max-width: 100%;
     }
 
-    .card-text > p {
+    .card-text>p {
         padding: 24px 0 48px;
     }
 }
