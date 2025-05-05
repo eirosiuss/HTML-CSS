@@ -63,7 +63,7 @@ h1,
 h2,
 h3,
 h4 {
-    text-wrap: balance;
+    /* text-wrap: balance; */
 }
 
 a:not([class]) {
@@ -148,10 +148,6 @@ textarea:not([rows]) {
 /* =============================================== */
 /* Components */
 
-.absolute {
-    position: relative;
-}
-
 button {
     background-color: rgb(var(--clr-white));
     cursor: pointer;
@@ -176,17 +172,8 @@ button:focus-visible path {
     gap: 24px;
     position: absolute;
     bottom: 106px;
-    right: 59px;
-    transform: translate(50%, 0);
+    right: -67px;
     z-index: 10;
-}
-
-@media (36em <=width <=48em) {
-    .share-links {
-        bottom: 66px;
-        right: 55px;
-        transform: translate(50%, -50%);
-    }
 }
 
 @media (width < 36em) {
@@ -207,10 +194,8 @@ button:focus-visible path {
     left: 0;
     bottom: 0;
     right: 0;
-    /* width: 100%;
-    height: 100%; */
     background: transparent;
-    z-index: 1;
+    z-index: 9;
 }
 
 .share-links::after {
@@ -282,24 +267,23 @@ main {
 article {
     margin: 0 auto;
     max-width: 730px;
-    height: 280px;
     margin-block: 260px;
     border-radius: 10px;
     background-color: rgb(var(--clr-white));
     display: flex;
+    position: relative;
 }
 
 .card-image img {
     border-radius: 10px 0 0 10px;
+
     height: 100%;
-    /* clip-path: inset(0 65px 0 0); */
 }
 
 @media (36em <=width <=48em) {
     article {
         margin-block: 227px;
-        max-width: 608px;
-        height: auto;
+
     }
 }
 
@@ -313,7 +297,6 @@ article {
     .card-image img {
         border-radius: 10px 10px 0 0;
         height: auto;
-        clip-path: inset(0);
     }
 
     main {
@@ -324,7 +307,6 @@ article {
 .card-text {
     padding: 30px 40px 30px 0;
     margin-left: 25px;
-    max-width: 365px;
     position: relative;
 }
 
@@ -332,18 +314,10 @@ article {
     padding: 24px 0;
 }
 
-@media (36em <=width <=48em) {
-    .card-text {
-        padding: 41px 36px 41px 0;
-    }
-}
-
 @media (width < 36em) {
     .card-text {
         padding: 32px 30px 18px;
         margin-left: 0;
-        max-width: 100%;
-        background-color: rgb(var(--clr-white));
         border-radius: 0 0 10px 10px;
     }
 
@@ -358,11 +332,6 @@ article {
 }
 
 @media (width < 36em) {
-    /* .profile {
-        justify-content: unset;
-        flex-direction: row-reverse;
-    } */
-
     *,
     ::before,
     ::after {
