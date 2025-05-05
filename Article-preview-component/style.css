@@ -59,13 +59,6 @@ ol {
     list-style: none;
 }
 
-h1,
-h2,
-h3,
-h4 {
-    /* text-wrap: balance; */
-}
-
 a:not([class]) {
     text-decoration-skip-ink: auto;
     text-decoration: none;
@@ -210,40 +203,60 @@ button:focus-visible path {
     clip-path: polygon(50% 0%, 100% 0%, 50% 100%, 0% 0%);
 }
 
-.share-links p,
-.share-links-mobile p {
+.share-links p {
     text-transform: uppercase;
 }
 
-.share-links .icons,
-.share-links-mobile .icons {
+.share-links .icons {
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
+.share-links .mobile-button {
+    display: none;
+}
+
 @media (width < 36em) {
     .share-links {
-        display: none;
+        padding: 22px 30px;
+        border-radius: 0 0 10px 10px;
+        justify-content: space-between;
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        z-index: 10;
     }
 
-    /* .mobile-off {
-        display: none;
-    } */
+    .share-links .mobile-button {
+        display: block;
+    }
+
+    .share-links button {
+        background-color: rgb(var(--clr-grey-900));
+    }
+
+    .share-links button circle {
+        fill: rgb(var(--clr-grey-500))
+    }
+
+    .share-links button path {
+        fill: rgb(var(--clr-white))
+    }
 
     .share-links::after {
         display: none;
     }
 
-    .share-links-mobile {
-        background: rgb(var(--clr-grey-900));
-        padding: 22px 30px;
-        border-radius: 0 0 10px 10px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        margin: 0 -30px -18px;
+    .share-links button:hover circle,
+    .share-links button:focus-visible circle {
+        fill: rgb(var(--clr-grey-200))
+    }
+
+    .share-links button:hover path,
+    .share-links button:focus-visible path {
+        fill: rgb(var(--clr-grey-500))
     }
 
     button:hover circle,
@@ -276,14 +289,12 @@ article {
 
 .card-image img {
     border-radius: 10px 0 0 10px;
-
     height: 100%;
 }
 
 @media (36em <=width <=48em) {
     article {
         margin-block: 227px;
-
     }
 }
 
@@ -332,6 +343,7 @@ article {
 }
 
 @media (width < 36em) {
+
     *,
     ::before,
     ::after {

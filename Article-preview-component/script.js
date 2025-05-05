@@ -1,5 +1,7 @@
 let button = document.querySelector('#button')
 
+let mobileButton = document.querySelector('.mobile-button')
+
 let modalWrapper = document.querySelector('#modal-wrapper')
 
 button.addEventListener('click', () => {
@@ -8,8 +10,10 @@ button.addEventListener('click', () => {
 
 let backdrop = document.querySelector('#backdrop')
 
-
 backdrop.addEventListener('click', () => {
+    modalWrapper.style.display = 'none'
+})
 
+mobileButton.addEventListener('click', () => {
     modalWrapper.style.display = 'none'
 })
