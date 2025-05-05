@@ -1,9 +1,9 @@
 let button = document.querySelector('#button')
 
-let shareLinks = document.querySelector('#share-links')
+let modalWrapper = document.querySelector('#modal-wrapper')
 
 button.addEventListener('click', () => {
-    shareLinks.style.display = 'flex'
+    modalWrapper.style.display = 'block'
 })
 
 let backdrop = document.querySelector('#backdrop')
@@ -11,9 +11,5 @@ let backdrop = document.querySelector('#backdrop')
 
 backdrop.addEventListener('click', () => {
 
-    shareLinks.style.display = 'none'
+    modalWrapper.style.display = 'none'
 })
-
-console.log(button); // Turi rodyti elementą, ne null
-console.log(shareLinks); // Turi rodyti elementą, ne null
-console.log(backdrop); // Turi rodyti elementą, ne null
